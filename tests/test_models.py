@@ -74,3 +74,11 @@ def test_conv_target_kernel3_is_subset_of_all():
 def test_invalid_backbone_is_rejected():
     with pytest.raises(ValueError):
         build_backbone(_model_config("not_a_real_model", TransferStrategy.FT), _N_CLASSES)
+
+
+@pytest.mark.parametrize("n_classes", [0, -1])
+def test_invalid_class_count_is_rejected(n_classes):
+    config = _model_config("resnet18", TransferStrategy.FT)
+
+    with pytest.raises(ValueError, match="n_classes must be greater than zero"):
+        build_backbone(config, n_classes)

@@ -22,6 +22,9 @@ def build_backbone(model: ModelConfig, n_classes: int) -> nn.Module:
     larger resolution accept the project's 64x64 inputs; backbones that do not
     accept the argument are created without it.
     """
+    if n_classes <= 0:
+        raise ValueError("n_classes must be greater than zero.")
+
     if not timm.is_model(model.backbone):
         raise ValueError(
             f"Unknown timm backbone '{model.backbone}'. "
