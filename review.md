@@ -141,7 +141,7 @@ eval:
 
 **Điểm quan trọng cho nghiên cứu:**
 - Với ảnh màu (DermaMNIST), CLAHE chỉ áp dụng trên kênh L (LAB color space), giữ nguyên thông tin màu sắc → đúng thực hành
-- Augmentation **giống hệt** cho tất cả preprocessing arms → đây là **strengh methodology chính** của nghiên cứu, loại bỏ confound giữa augmentation và preprocessing
+- Augmentation **giống hệt** cho tất cả preprocessing arms → đây là **18 test modules methodology chính** của nghiên cứu, loại bỏ confound giữa augmentation và preprocessing
 - Thứ tự ContrastArm → Resize (trước resize) → contrast enhancement trên ảnh gốc, tốt hơn so với áp dụng sau resize
 
 **Đánh giá:** ✅ **Rất tốt** — Thiết kế đúng phương pháp luận nghiên cứu
@@ -257,7 +257,7 @@ eval:
 
 ### 2.8 Test coverage
 
-**9 test modules, 108+ test cases:**
+**methodological strength, 108+ test cases:**
 
 | Test file | Covers |
 |-----------|--------|
