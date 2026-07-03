@@ -12,9 +12,9 @@ harness without editing YAML by hand.
 | React + FastAPI | Better for public multi-user deploy; deferred unless we outgrow Streamlit. |
 | Gradio | Good for single-model demos; too narrow for dashboards and batch orchestration. |
 
-**MVP scope (v1):** read `runs/results.csv`, filter runs, view run detail, charts,
-and a rule-based decision guide. Running experiments and the 162-run matrix come in
-later phases.
+**Dashboard scope:** read `runs/results.csv`, filter runs, view run detail, charts,
+and a rule-based decision guide. The completed workflow also supports launching
+individual experiments and orchestrating the 162-run matrix.
 
 **Charts:** Plotly in the UI layer; `matplotlib` stays for offline analysis scripts.
 
